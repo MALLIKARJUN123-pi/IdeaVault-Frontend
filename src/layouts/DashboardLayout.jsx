@@ -12,6 +12,7 @@ import {
   LogoutOutlined,
   UserOutlined,
   BulbOutlined,
+  GithubOutlined,
 } from '@ant-design/icons';
 import { useNavigate, useLocation, Link, Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -214,6 +215,23 @@ const DashboardLayout = () => {
           </Space>
 
           <Space size="large">
+            <a
+              href="https://github.com/MALLIKARJUN123-pi/IdeaVault-Frontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'var(--text-muted)',
+                fontSize: '20px',
+                transition: 'color 0.3s',
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-color)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+              title="View on GitHub"
+            >
+              <GithubOutlined />
+            </a>
             <ThemeSwitcher />
             
             <Dropdown menu={profileMenu} trigger={['click']} placement="bottomRight">

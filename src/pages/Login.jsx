@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Input, Button, Checkbox, Card, Typography, message, Alert } from 'antd';
-import { MailOutlined, LockOutlined, BulbOutlined } from '@ant-design/icons';
+import { Form, Input, Button, Checkbox, Card, Typography, message, Alert, Divider } from 'antd';
+import { MailOutlined, LockOutlined, BulbOutlined, GithubOutlined } from '@ant-design/icons';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -113,6 +113,28 @@ const Login = () => {
               Sign Up
             </Link>
           </Text>
+        </div>
+
+        <Divider style={{ margin: '16px 0 8px 0' }} />
+
+        <div style={{ textAlign: 'center' }}>
+          <a
+            href="https://github.com/MALLIKARJUN123-pi/IdeaVault-Frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: 'var(--text-muted)',
+              fontSize: '14px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              transition: 'color 0.3s',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-color)'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+          >
+            <GithubOutlined /> View on GitHub
+          </a>
         </div>
       </Card>
     </div>
